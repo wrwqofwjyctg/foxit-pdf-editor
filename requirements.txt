@@ -1,0 +1,10 @@
+pywin32==306
+PyQt6==6.7.1
+pikepdf==9.4.0
+pypdf==5.1.0
+pdfminer.six==20240706
+pillow==10.4.0
+python-dotenv==1.0.1
+loguru==0.7.2
+keyring==25.5.0
+requests==2.32.3
