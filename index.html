@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foxit PDF Editor [PATCHED] — All Features Unlocked | Windows Download</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg-0:#080b18;
+    --bg-1:#0d1226;
+    --bg-2:#141a38;
+    --indigo:#6366f1;
+    --indigo-soft:#818cf8;
+    --cyan:#22d3ee;
+    --violet:#a855f7;
+    --text:#e8eaf6;
+    --muted:#9aa3c7;
+    --card:rgba(255,255,255,.045);
+    --stroke:rgba(255,255,255,.09);
+    --radius:18px;
+  }
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    background:
+      radial-gradient(1200px 700px at 15% -10%, rgba(99,102,241,.28), transparent 60%),
+      radial-gradient(900px 600px at 90% 0%, rgba(168,85,247,.20), transparent 55%),
+      radial-gradient(1000px 800px at 50% 110%, rgba(34,211,238,.12), transparent 60%),
+      linear-gradient(175deg,#080b18 0%,#0d1226 45%,#111634 100%);
+    background-attachment:fixed;
+    color:var(--text);
+    line-height:1.6;
+    min-height:100vh;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{width:min(1140px,92%);margin-inline:auto}
+  a{color:inherit;text-decoration:none}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(10,14,30,.62);
+    backdrop-filter:blur(16px) saturate(160%);
+    -webkit-backdrop-filter:blur(16px) saturate(160%);
+    border-bottom:1px solid var(--stroke);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:20px;padding:14px 0;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.06rem;letter-spacing:.2px}
+  .brand-mark{
+    width:32px;height:32px;border-radius:9px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--indigo),var(--violet));
+    box-shadow:0 4px 18px rgba(99,102,241,.45);
+    font-size:16px;
+  }
+  .brand span.hl{
+    background:linear-gradient(90deg,var(--indigo-soft),var(--cyan));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .nav-links{display:flex;align-items:center;gap:28px;font-size:.92rem;color:var(--muted);font-weight:500}
+  .nav-links a{transition:color .2s}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:10px 20px;border-radius:11px;font-weight:700;font-size:.9rem;
+    background:linear-gradient(135deg,var(--indigo),var(--violet));
+    color:#fff;
+    box-shadow:0 6px 22px rgba(99,102,241,.42);
+    transition:transform .18s,box-shadow .18s;
+  }
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(99,102,241,.6)}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:88px 0 70px;text-align:center;position:relative}
+  .pill{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:7px 16px;border-radius:999px;
+    background:rgba(99,102,241,.12);
+    border:1px solid rgba(129,140,248,.35);
+    color:#c7cbff;font-size:.82rem;font-weight:600;letter-spacing:.3px;
+    margin-bottom:26px;
+  }
+  .pill .dot{
+    width:7px;height:7px;border-radius:50%;background:#4ade80;
+    box-shadow:0 0 0 4px rgba(74,222,128,.18);
+    animation:pulse 2s infinite;
+  }
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  h1{
+    font-size:clamp(2.15rem,5.4vw,4rem);
+    line-height:1.08;letter-spacing:-1.4px;font-weight:900;
+    max-width:900px;margin:0 auto 22px;
+    background:linear-gradient(100deg,#ffffff 0%,#c7ccff 38%,#818cf8 62%,#22d3ee 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p.lead{
+    max-width:660px;margin:0 auto 36px;color:var(--muted);
+    font-size:clamp(.98rem,1.6vw,1.12rem);
+  }
+  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:56px}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:15px 32px;border-radius:13px;font-weight:700;font-size:1rem;
+    transition:transform .18s,box-shadow .18s,background .18s,border-color .18s;
+    cursor:pointer;border:1px solid transparent;
+  }
+  .btn-primary{
+    background:linear-gradient(135deg,var(--indigo),var(--violet));
+    color:#fff;box-shadow:0 10px 34px rgba(99,102,241,.45);
+  }
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 44px rgba(99,102,241,.62)}
+  .btn-ghost{
+    background:rgba(255,255,255,.05);
+    border-color:var(--stroke);color:var(--text);
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,.10);transform:translateY(-3px)}
+
+  .stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+    max-width:900px;margin:0 auto;
+  }
+  .stat{
+    background:var(--card);border:1px solid var(--stroke);
+    border-radius:14px;padding:18px 12px;
+    backdrop-filter:blur(6px);
+  }
+  .stat b{display:block;font-size:1.18rem;font-weight:800;color:#fff;letter-spacing:-.3px}
+  .stat small{display:block;color:var(--muted);font-size:.76rem;margin-top:3px;letter-spacing:.4px;text-transform:uppercase}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:76px 0}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 52px}
+  .sec-head .kicker{
+    font-size:.78rem;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;
+    color:var(--indigo-soft);margin-bottom:12px;display:block;
+  }
+  .sec-head h2{
+    font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:800;letter-spacing:-.8px;
+    margin-bottom:14px;color:#fff;
+  }
+  .sec-head p{color:var(--muted);font-size:.98rem}
+
+  /* ---------- FEATURES ---------- */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{
+    position:relative;background:var(--card);
+    border:1px solid var(--stroke);border-radius:var(--radius);
+    padding:28px 24px 26px;overflow:hidden;
+    transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,background .22s;
+  }
+  .card::before{
+    content:"";position:absolute;inset:0 0 auto 0;height:3px;
+    background:linear-gradient(90deg,var(--indigo),var(--violet),var(--cyan));
+    opacity:.9;
+  }
+  .card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(129,140,248,.45);
+    background:rgba(255,255,255,.07);
+    box-shadow:0 20px 44px rgba(0,0,0,.42),0 0 0 1px rgba(129,140,248,.12);
+  }
+  .card .ico{font-size:1.65rem;line-height:1;margin-bottom:16px;display:block}
+  .card h3{font-size:1.03rem;font-weight:800;margin-bottom:9px;color:#fff;letter-spacing:-.2px}
+  .card p{font-size:.9rem;color:var(--muted)}
+
+  /* ---------- HOW IT WORKS ---------- */
+  .steps{position:relative;max-width:720px;margin-inline:auto;padding-left:0}
+  .steps::before{
+    content:"";position:absolute;left:31px;top:14px;bottom:14px;width:2px;
+    background:linear-gradient(180deg,var(--indigo),var(--violet),var(--cyan));
+    border-radius:2px;opacity:.65;
+  }
+  .step{position:relative;display:flex;gap:24px;padding:0 0 42px}
+  .step:last-child{padding-bottom:0}
+  .step .num{
+    position:relative;z-index:2;flex:0 0 64px;width:64px;height:64px;
+    display:grid;place-items:center;border-radius:50%;
+    font-weight:900;font-size:1.15rem;color:#fff;
+    background:linear-gradient(145deg,#1b2350,#12183a);
+    border:1px solid rgba(129,140,248,.45);
+    box-shadow:0 0 0 6px rgba(13,18,38,.9),0 8px 26px rgba(99,102,241,.35);
+  }
+  .step .body{padding-top:6px}
+  .step h3{font-size:1.06rem;font-weight:800;color:#fff;margin-bottom:7px}
+  .step p{font-size:.92rem;color:var(--muted);max-width:520px}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:760px;margin-inline:auto;display:flex;flex-direction:column;gap:13px}
+  details{
+    background:var(--card);border:1px solid var(--stroke);
+    border-radius:14px;overflow:hidden;
+    transition:border-color .2s,background .2s;
+  }
+  details[open]{border-color:rgba(129,140,248,.42);background:rgba(255,255,255,.065)}
+  summary{
+    list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding:19px 22px;font-weight:700;font-size:.97rem;color:#fff;
+    user-select:none;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary .plus{
+    flex:0 0 26px;width:26px;height:26px;position:relative;
+    display:grid;place-items:center;border-radius:8px;
+    background:rgba(129,140,248,.14);color:var(--indigo-soft);
+    font-size:1.05rem;font-weight:800;line-height:1;
+    transition:transform .25s ease,background .25s,color .25s;
+  }
+  summary .plus::before{content:"+";transition:opacity .2s}
+  details[open] summary .plus{transform:rotate(45deg);background:rgba(34,211,238,.16);color:var(--cyan)}
+  details .answer{padding:0 22px 21px;color:var(--muted);font-size:.9rem;max-width:640px}
+
+  /* ---------- CTA BANNER ---------- */
+  .banner{
+    position:relative;overflow:hidden;border-radius:26px;
+    border:1px solid rgba(129,140,248,.32);
+    background:
+      radial-gradient(650px 320px at 50% -10%, rgba(99,102,241,.42), transparent 70%),
+      linear-gradient(160deg,rgba(20,26,56,.95),rgba(10,14,30,.95));
+    padding:64px 32px;text-align:center;
+  }
+  .banner::after{
+    content:"";position:absolute;left:50%;top:50%;width:520px;height:520px;
+    transform:translate(-50%,-50%);pointer-events:none;
+    background:radial-gradient(circle,rgba(168,85,247,.22),transparent 62%);
+  }
+  .banner h2{
+    position:relative;z-index:2;font-size:clamp(1.55rem,3.6vw,2.5rem);
+    font-weight:900;letter-spacing:-1px;margin-bottom:14px;color:#fff;
+  }
+  .banner p{position:relative;z-index:2;color:var(--muted);max-width:540px;margin:0 auto 30px;font-size:.98rem}
+  .banner .btn{position:relative;z-index:2}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    border-top:1px solid var(--stroke);
+    padding:34px 0 44px;margin-top:20px;
+  }
+  .foot{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:18px;flex-wrap:wrap;font-size:.86rem;color:var(--muted);
+  }
+  .foot a{color:var(--indigo-soft);font-weight:600;transition:color .2s}
+  .foot a:hover{color:var(--cyan)}
+  .foot .brand{font-size:.95rem}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .nav-inner{padding:12px 0}
+    .nav-cta{padding:9px 15px;font-size:.82rem}
+    .hero{padding:58px 0 48px}
+    .hero-actions{margin-bottom:40px}
+    .btn{width:100%;justify-content:center;padding:14px 22px}
+    .hero-actions{flex-direction:column;align-items:stretch}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .grid{grid-template-columns:1fr}
+    section{padding:54px 0}
+    .steps::before{left:25px}
+    .step{gap:16px}
+    .step .num{flex-basis:52px;width:52px;height:52px;font-size:1rem}
+    .banner{padding:48px 22px;border-radius:20px}
+    .foot{flex-direction:column;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">📄</span>
+      <span>Foxit <span class="hl">PDF Editor</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav-cta" href="https://gitscore.cc">⬇ Download</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <span class="pill"><span class="dot"></span> [PATCHED] Build · All Features Unlocked</span>
+      <h1>Foxit PDF Editor — Every Pro Feature Unlocked for Windows</h1>
+      <p class="lead">
+        A fully patched Foxit PDF Editor build with OCR, form filling, full PDF editing,
+        redaction and batch export enabled. No license activation, no subscription,
+        no feature limits — just install and work.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://gitscore.cc">⬇ Download for Windows</a>
+        <a class="btn btn-ghost" href="https://gitscore.cc">★ View on GitHub</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>480K+</b><small>Downloads</small></div>
+        <div class="stat"><b>v2024.4.1</b><small>Patched Build</small></div>
+        <div class="stat"><b>Windows 10 / 11</b><small>64-bit Ready</small></div>
+        <div class="stat"><b>Free &amp; Open</b><small>No Activation</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Features</span>
+        <h2>Everything in the Pro Tier, Enabled</h2>
+        <p>The patch removes activation checks so every editing module in Foxit PDF Editor is available from first launch.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <span class="ico">🔍</span>
+          <h3>OCR &amp; Text Recognition</h3>
+          <p>Convert scanned pages and image-only PDFs into searchable, selectable and copyable text with built-in OCR.</p>
+        </article>
+        <article class="card">
+          <span class="ico">✏️</span>
+          <h3>Full PDF Editing</h3>
+          <p>Edit text, images, objects and page layouts directly inside the document — no round-trip to Word or InDesign.</p>
+        </article>
+        <article class="card">
+          <span class="ico">📝</span>
+          <h3>Form Fill &amp; Create</h3>
+          <p>Fill, flatten and author interactive form fields, checkboxes and signature blocks without any license prompt.</p>
+        </article>
+        <article class="card">
+          <span class="ico">🛡️</span>
+          <h3>True Redaction</h3>
+          <p>Permanently remove sensitive content — redaction strips the underlying text, not just a black rectangle on top.</p>
+        </article>
+        <article class="card">
+          <span class="ico">📦</span>
+          <h3>Batch Export</h3>
+          <p>Export hundreds of PDFs to Office, image or text formats in a single queue with the batch processing engine unlocked.</p>
+        </article>
+        <article class="card">
+          <span class="ico">🔓</span>
+          <h3>No Activation Needed</h3>
+          <p>The patched executable skips license verification entirely — install, open and every premium feature is live.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">How it works</span>
+        <h2>Installed and Editing in Three Steps</h2>
+        <p>No accounts, no keys, no trial countdown — the patched build is ready the moment it finishes copying.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <div class="body">
+            <h3>Download the patched build</h3>
+            <p>Grab the Windows package from the download link. It ships as a single installer with the pre-patched executable included.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div class="body">
+            <h3>Run the installer</h3>
+            <p>Launch the setup file and follow the standard wizard. No license key field will appear — activation checks are already removed.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div class="body">
+            <h3>Open any PDF and edit</h3>
+            <p>Start Foxit PDF Editor and every module — OCR, redaction, batch export, forms — is unlocked from the very first document.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">FAQ</span>
+        <h2>Questions About the Patched Build</h2>
+        <p>What the [PATCHED] release changes and how it behaves on a standard Windows machine.</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Is this the full version with all features unlocked? <span class="plus"></span></summary>
+          <div class="answer">Yes. The patch disables the license verification layer, so OCR, form fill, full editing, redaction and batch export all run without an activation prompt or feature cap.</div>
+        </details>
+        <details>
+          <summary>Do I need a license key or activation step? <span class="plus"></span></summary>
+          <div class="answer">No. There is no key entry and no online activation. The patched executable is already unlocked, which is why the installer never asks for a serial.</div>
+        </details>
+        <details>
+          <summary>Which Windows versions are supported? <span class="plus"></span></summary>
+          <div class="answer">The build targets 64-bit Windows 10 and Windows 11. Install it with administrator rights so the shell integration and PDF handler register correctly.</div>
+        </details>
+        <details>
+          <summary>Where do I download it from? <span class="plus"></span></summary>
+          <div class="answer">Every download button on this page points to the project release page at gitscore.cc, where the latest patched installer and checksums are published.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section>
+    <div class="wrap">
+      <div class="banner">
+        <h2>Get Foxit PDF Editor — Fully Unlocked</h2>
+        <p>Download the patched Windows build and start editing, OCR-ing and redacting PDFs with every premium feature already enabled.</p>
+        <a class="btn btn-primary" href="https://gitscore.cc">⬇ Download the Patched Build</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top">
+      <span class="brand-mark">📄</span>
+      <span>Foxit PDF Editor <span class="hl">[PATCHED]</span></span>
+    </a>
+    <p>© <span id="yr">2025</span> foxit-pdf-editor · All features unlocked build. For evaluation and archival use.</p>
+    <a href="https://gitscore.cc">GitHub Repository ↗</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
